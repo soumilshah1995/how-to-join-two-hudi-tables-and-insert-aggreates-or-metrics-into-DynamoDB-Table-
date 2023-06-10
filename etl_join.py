@@ -1,9 +1,6 @@
 """
 Author : Soumil Nitin Shah
 Email shahsoumil519@gmail.com
---additional-python-modules  | faker==11.3.0,pynamodb
---conf  |  spark.serializer=org.apache.spark.serializer.KryoSerializer  --conf spark.sql.hive.convertMetastoreParquet=false --conf spark.sql.hive.convertMetastoreParquet=false --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.hudi.catalog.HoodieCatalog --conf spark.sql.legacy.pathOptionBehavior.enabled=true --conf spark.sql.extensions=org.apache.spark.sql.hudi.HoodieSparkSessionExtension
---datalake-formats | hudi
 """
 
 try:
@@ -47,20 +44,20 @@ job.init(args["JOB_NAME"], args)
 global BUCKET_NAME, loaders_json_payload
 
 loaders_json_payload = {
-    "check_point_buckets": "soumilshah-hudi-demos",
+    "check_point_buckets": "sXXXX",
     "source": [
         {
             "source_type": "HUDI",  # HUDI | DYNAMODB
             "table_name": "orders",
             "spark_table_name": "orders",  # Creates TempView with this table name
-            "path": "s3://soumilshah-hudi-demos/silver/table_name=orders/",
+            "path": "s3://sXXXXXXsilver/table_name=orders/",
             "type": "FULL"  # INC | FULL
         },
         {
             "source_type": "HUDI",  # HUDI | DYNAMODB
             "table_name": "customers",
             "spark_table_name": "customers",  # Creates TempView with this table name
-            "path": "s3://soumilshah-hudi-demos/silver/table_name=customers/",
+            "path": "s3://XXXXXXXsilver/table_name=customers/",
             "type": "FULL"  # INC | FULL
         },
     ]
