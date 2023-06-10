@@ -241,7 +241,7 @@ upsert_hudi_table(
     enable_meta_data_indexing='false',
     use_sql_transformer=False,
     sql_transformer_query='default',
-    target_path="s3://soumilshah-hudi-demos/silver/table_name=customers/",
+    target_path="s3://XXX/silver/table_name=customers/",
     spark_df=spark_df_customers,
 )
 
@@ -262,6 +262,6 @@ upsert_hudi_table(
     enable_meta_data_indexing='false',
     use_sql_transformer=False,
     sql_transformer_query='default',
-    target_path="s3://soumilshah-hudi-demos/silver/table_name=orders/",
+    target_path="s3://XXXX/silver/table_name=orders/",
     spark_df=spark_df_orders,
 )
